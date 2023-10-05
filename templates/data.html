@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}Recipe OCR Results{% endblock %}
+{% block main %}
+    <h1 class="mb-4">Receipt OCR Results</h1>
+    <h3>Extracted Text:</h3>
+    <pre>{{extracted_text}}</pre>
+    <h3>Available Food Items With Time Before Expiry:</h3>
+    <!-- <ul class="list-group"> -->
+
+    {% for date in dates %}
+        <p>{{date}}</p>
+    {% endfor %}
+    <h3>Dishes:</h3>
+    </ul>
+        {% for recipe in recipes %}
+            <div class="card mb-3 center" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src= "{{recipe.image}}" alt="Recipe Image" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{recipe.title}}</h5>
+                            <br>
+                            <h6>Requirements:</h6>
+                            <ul class="list-group list-group-flush">
+                            
+                            {% set items = [] %}
+                            {% for ingredient in recipe["usedIngredients"] %}
+                                <li class='list-group-item'>{{ingredient.original}}</li>
+                                {{items.append(ingredient.original) or ""}}
+                            {% endfor %}
+
+                            {% for ingredient in recipe["missedIngredients"] %}
+                                <li class='list-group-item'>{{ingredient.original}}</li>
+                                {{items.append(ingredient.original) or ""}}
+                            {% endfor %}
+                            <br>
+                            <form action = "/instructions" method = "post">
+                                <input name = "id" value = {{recipe.id}} type = "hidden">
+                                <input name = "name" value = "{{recipe.title}}" type = "hidden">
+                                <input name = "image" value = {{recipe.image}} type = "hidden">
+                                <input name = "items" value = "{{items}}" type = "hidden">
+                                <input class="btn btn-primary" type = "submit" value = "Get Step-By-Step Instructions">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+                    
+    </ul>
+                           
+{% endblock %}

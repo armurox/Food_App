@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Receipt OCR{% endblock %}
+
+{% block main %}
+    <div class="container mt-5">
+        <h1 class="mb-4">Receipt OCR</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload Receipt Image</label>
+                <input type="file" name="image" class="form-control" id="image" accept="image/*" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+{% endblock %}

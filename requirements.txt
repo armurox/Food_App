@@ -1,0 +1,10 @@
+Flask-Session
+flask
+flask_session
+werkzeug
+openai
+pytesseract
+PIL
+sqlite3
+functools
+requests
