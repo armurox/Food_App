@@ -25,7 +25,7 @@ This is a Flask web application for organizing and managing your kitchen ingredi
 
 ## Prerequisites
 
-Before running the application, make sure you have the following installed:
+Before running the application, make sure you have the following installed (If the pip command below does not work):
 
 - Python 3.x
 - Flask
@@ -33,6 +33,9 @@ Before running the application, make sure you have the following installed:
 - Requests
 - SQLite3
 - Werkzeug
+
+## Note
+As the application is currently in development, if you wish to use it, please provide your own OpenAI API key. I am not currently on a paid plan, and therefore do not wish to exceed my rate limit. Once obtained, please go into helpers.py and in the `ExpiryDate` function, put in your API in the `openai.api_key` section.
 
 ## Getting Started
 
