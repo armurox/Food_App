@@ -41,7 +41,7 @@ Before running the application, make sure you have the following installed:
 2. Install the required packages:
 
    ```
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 3. Run the application:
