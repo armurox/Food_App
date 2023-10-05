@@ -1,5 +1,5 @@
-# How to test changes made to the repo
-1. `git pull`
+# How to use the current website changes made to the repo
+1. Clone this repo
 2. Install all dependencies (including recently added ones) with `pip3 install -r requirements.txt` or `pip install -r requirements.txt` for python versions before 3.x
 3. If everything's present either python3 app.py or flask run should work, and click on the link (which should be 127.0.0.1)
 
