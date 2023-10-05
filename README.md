@@ -3,7 +3,7 @@
 2. Install all dependencies (including recently added ones) with `pip3 install -r requirements.txt` or `pip install -r requirements.txt` for python versions before 3.x
 3. If everything's present either python3 app.py or flask run should work, and click on the link (which should be 127.0.0.1)
 
-## General workflow when comitting new code
+## General workflow when comitting new code (note to self)
 1. `git pull`
 2. Install all dependencies (including recently added ones) with `pip3 install -r requirements.txt` or `pip install -r requirements.txt` for python versions before 3.x
 3. Create a new branch and change into it with the command `git checkout -b BRANCH_NAME` (usually feature is the standard branch name)
