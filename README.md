@@ -21,6 +21,7 @@ This is a Flask web application for organizing and managing your kitchen ingredi
 4. **Recipe Search**
    - Users can search for recipes based on the ingredients they have stored.
    - The application retrieves recipes using the Spoonacular API, providing detailed instructions and information about the recipes.
+   - Expiry dates of ingredients are obtained (as a heuristic at the moment), from the OpenAI API.
 
 ## Prerequisites
 
@@ -83,4 +84,4 @@ Before running the application, make sure you have the following installed:
 
 ## Acknowledgments
 
-This project was created with Flask, SQLite, and the Spoonacular API.
+This project was created with Flask, SQLite, the Spoonacular API and OpenAI API.
