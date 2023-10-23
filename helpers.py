@@ -171,7 +171,7 @@ def get_stored_ingredients():
 def get_recipes_for_ingredients(ingredients):
     """Connect to API, return recipes based on ingredients."""
 
-    api_key = "50f9a9618ba54f559469cd1ca764904b"
+    api_key = ""
     api_url = "https://api.spoonacular.com/recipes/findByIngredients"
     query_params = {
         "apiKey": api_key,
