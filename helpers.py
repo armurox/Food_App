@@ -186,7 +186,7 @@ def get_recipes_for_ingredients(ingredients):
 
 def ExpiryDate(ingredients):
     """Get expiry date for each ingredient in ingredients list."""
-    openai.api_key = ""
+    openai.api_key = "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"
     prompt = f"what is the expiry date of {ingredients}, Please answer with *Ingredient*: *ExpirationDate*, After each pair of values, seperate the next pair with a !" 
     response = openai.Completion.create(
         engine="text-davinci-003",
